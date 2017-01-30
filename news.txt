@@ -1,0 +1,14 @@
+Film/ "The Girl on the Train"/ /
+Film/
+Film/
+Film/
+Film/
+Film/
+Book/
+Book/
+Book/
+Book/
+Book/
+Disk/ "Lemonade"/ Beyonce/ 23.04.2016/ Lemonade is a visual album – a number of music videos offset by chapter titles like "Intuition," "Denial," "Apathy," "Emptiness" and, eventually, "Resurrection" – connected by a voiceover from Beyoncé reading poetry by Warsan Shire./
+Disk/ "Blackstar"/ David Bowie/ 08.01.2016/
+Disk/ "The Life of Pablo"/ Kanye West/
