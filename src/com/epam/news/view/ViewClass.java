@@ -1,10 +1,5 @@
 package com.epam.news.view;
 
-import com.epam.news.view.Actions;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
 /**
  * Created by hannatarletskaya on 1/30/17.
  */
@@ -47,7 +42,7 @@ public class ViewClass {
 
 	private static void findNews(Command ac) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Module 1 ");
 	}
 
 	//// SOME METHODS TO RUN THE CODE
