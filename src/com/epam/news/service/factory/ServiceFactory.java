@@ -1,9 +1,7 @@
 package com.epam.news.service.factory;
 
-import com.epam.news.service.interfaces.ClientService;
-import com.epam.news.service.impl.ClientServiceImpl;
-import com.epam.news.service.interfaces.PortalService;
 import com.epam.news.service.impl.PortalServiceImpl;
+import com.epam.news.service.interfaces.PortalService;
 
 /**
  * Created by hannatarletskaya on 1/30/17.
@@ -11,7 +9,6 @@ import com.epam.news.service.impl.PortalServiceImpl;
 
 public final class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();
-    private final ClientService clientService = new ClientServiceImpl();
     private final PortalService portalService = new PortalServiceImpl();
 
     private ServiceFactory() {
@@ -19,10 +16,6 @@ public final class ServiceFactory {
 
     public static ServiceFactory getInstance() {
         return instance;
-    }
-
-    public ClientService getCLientService() {
-        return clientService;
     }
 
     public PortalService getLibraryService() {

@@ -8,7 +8,6 @@ import com.epam.news.bean.News;
 public interface PortalService {
     public void addNews(News news);
 
-    public void deleteNews(News news);
+    public void findNews(News news);
 
-    public void editNews(News news);
 }

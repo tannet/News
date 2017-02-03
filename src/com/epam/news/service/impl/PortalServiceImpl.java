@@ -13,12 +13,8 @@ public class PortalServiceImpl implements PortalService {
     }
 
     @Override
-    public void deleteNews(News news) {
+    public void findNews(News news) {
 
     }
 
-    @Override
-    public void editNews(News news) {
-
-    }
 }
