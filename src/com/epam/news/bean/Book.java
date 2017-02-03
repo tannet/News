@@ -16,5 +16,4 @@ public class Book extends News{
 		return "Book: " + super.toString() + ", genre=" + genre;
 	}
 
-
 }

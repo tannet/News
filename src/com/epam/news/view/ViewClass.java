@@ -7,13 +7,10 @@ import com.epam.news.bean.Disk;
 import com.epam.news.bean.Film;
 import com.epam.news.bean.News;
 
-/**
- * Created by hannatarletskaya on 1/30/17.
- */
 public class ViewClass {
 
 	public static void main(String[] args) {
-		System.out.println("Hello");
+		////System.out.println("Hello");
 
 		// test commands
 		Command ac = Command.ADD_NEWS;
@@ -56,8 +53,6 @@ public class ViewClass {
 	private static String addNews(Scanner sc) {
 		System.out.println("Enter the news in format: ");
 		System.out.println("Category / Title / Author / Year / Additional info ");
-		//Scanner in = new Scanner(System.in);
-		//String s = in.nextLine();
 		String newsToAdd = sc.nextLine();
 		return newsToAdd;
 	}
@@ -68,7 +63,8 @@ public class ViewClass {
 		News newsToAdd;
 		if (category.equals("Book")) {
 			newsToAdd = new Book();
-			System.out.println(newsToAdd.toString());
+			//System.out.println(newsToAdd.toString());
+			//for(String st : s.split(" / ")) System.out.println(st);
 		} else if (category.equals("Film")) {
 			newsToAdd = new Film();
 			System.out.println(newsToAdd.toString());

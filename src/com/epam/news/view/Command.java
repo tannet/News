@@ -5,5 +5,7 @@ public enum Command {
 	
 	ADD_NEWS,
 	
-	SHOW_ALL_NEWS
+	SHOW_ALL_NEWS, 
+	
+	EXIT
 }

@@ -4,16 +4,17 @@ import com.epam.news.bean.News;
 import com.epam.news.dao.interfaces.NewsDAO;
 import com.epam.news.dao.factory.DAOFactory;
 
-/**
- * Created by hannatarletskaya on 1/30/17.
- */
 public class DBNewsDAO implements NewsDAO {
+	
+	private String fileName = "news.txt";
 
     @Override
     public void addNews(News news) {
-        DAOFactory daoObjectFactory = DAOFactory.getInstance();
-        NewsDAO bookDAO = daoObjectFactory.getBookDAO();
-        bookDAO.addNews(news);
+//        DAOFactory daoObjectFactory = DAOFactory.getInstance();
+//        NewsDAO bookDAO = daoObjectFactory.getBookDAO();
+//        bookDAO.addNews(news);
+    	
+    	
     }
 
     @Override
