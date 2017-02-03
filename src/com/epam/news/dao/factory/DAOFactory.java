@@ -14,7 +14,7 @@ public final class DAOFactory {
         return instance;
     }
 
-    public NewsDAO getBookDAO() {
+    public NewsDAO getNewsDAO() {
         return dbNewsImpl;
     }
 
