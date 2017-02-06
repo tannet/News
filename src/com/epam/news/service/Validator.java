@@ -10,11 +10,25 @@ public class Validator {
 		Matcher m = p.matcher(newsToAdd);
 		return m.matches();
 	}
-	//public static void main(String[] args) {System.out.println(isNewsToAddValid("Film / The / Tate Taylor "));}
-	public static boolean isCategorValid(String category) {
+
+	public static boolean isCategoryValid(String category) {
 		if (category.equals("Book") || category.equals("Film") || category.equals("Disk")) {
 			return true;
 		} else {
+			return false;
+		}
+	}
+
+	public static boolean isYearValid(String search) {
+		try {
+			int year = Integer.parseInt(search);
+			if (year <= 2017 && year >= 1896) {
+				return true;
+			} else {
+				System.out.println("Year must be integer number between 1896 and 2017.");
+				return false;
+			}
+		} catch (NumberFormatException e) {
 			return false;
 		}
 	}

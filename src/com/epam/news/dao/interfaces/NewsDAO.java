@@ -1,12 +1,12 @@
 package com.epam.news.dao.interfaces;
 
-import com.epam.news.bean.News;
+import java.util.ArrayList;
+
+import com.epam.news.dao.exception.DAOException;
 
 public interface NewsDAO {
-    public void addNews(News news);
+    public void addNews(String newsToAdd) throws DAOException;
 
-    public void deleteNews(News news);
-
-    public void editNews(News news);
+    public ArrayList<String> findNews() throws DAOException;
 }
 

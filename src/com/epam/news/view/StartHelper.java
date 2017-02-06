@@ -7,7 +7,7 @@ public class StartHelper {
 		System.out.println("");
 		System.out.println("        Valid formats for different commands:");
 		System.out.println("ADD_NEWS: [Category / Title / Author / Year / Additional info]   (*Field \"Year\" must be integer number between 1896 and 2017).");
-		System.out.println("FIND_NEWS: [Category] or [Title] or [Author] or [Year] or [Additional info]");
+		System.out.println("FIND_NEWS: [Category] or [Title] or [Author] or [Year]");
 		//System.out.println("PRINT_ALL_NEWS: [Category]");
 		System.out.println("");
 		System.out.println("        Categories: Film, Book , Disk.");

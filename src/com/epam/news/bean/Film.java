@@ -1,9 +1,9 @@
 package com.epam.news.bean;
 
-public class Film extends News{
+public class Film extends News {
 	private double rating;
-	
-	public Film (String s){
+
+	public Film(String s) {
 		super(s);
 		setRating(Double.parseDouble(s.split(" / ")[4]));
 	}
@@ -15,9 +15,9 @@ public class Film extends News{
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Film: " + super.toString() + ", rating=" + rating;
+		return "FILM: " + super.toString() + ", rating: " + rating;
 	}
 }

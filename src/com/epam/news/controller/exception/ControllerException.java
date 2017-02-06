@@ -1,4 +1,4 @@
-package com.epam.news.controller;
+package com.epam.news.controller.exception;
 
 public class ControllerException extends Exception{
 

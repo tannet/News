@@ -17,57 +17,7 @@ public class ViewClass {
 		try {
 			Controller.request(request);
 		} catch (ControllerException e) {
-			System.out.println("ERRRRRRRR");
-			e.printStackTrace();
+			System.out.println("ERROR: " + e);
 		}
 	}
 }
-
-
-
-
-
-// Actions a = new Actions();
-//
-// switch (com) {
-// case "ADD":
-// String entityToAdd = Actions.readNewsToAdd(sc);
-// //Actions.initializeNewsToAdd(entityToAdd);
-// Actions.sendNewsToConroller(entityToAdd);
-// break;
-// case "FIND":
-// Actions.readNewsToFind(sc);
-// break;
-// default:
-// // some comments
-// }
-
-// switch (ac) {
-// case FIND_NEWS:
-// findNews(ac);
-// break;
-// case ADD_NEWS:
-// // addNews();
-// initializeNewsToAdd(addNews(sc));
-// break;
-// case SHOW_ALL_NEWS:
-// break;
-// default:
-// // some comments
-// }
-
-// // test commands for finds
-// FindCommand fc = FindCommand.FIND_BY_AUTHOR;
-//
-// switch (fc) {
-// case FIND_BY_CATEGORY:
-// break;
-// case FIND_BY_TITLE:
-// break;
-// case FIND_BY_AUTHOR:
-// break;
-// case FIND_BY_YEAR:
-// break;
-// default:
-// // some comments
-// }

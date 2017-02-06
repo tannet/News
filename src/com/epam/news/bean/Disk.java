@@ -1,24 +1,23 @@
 package com.epam.news.bean;
 
-public class Disk extends News{
-	private double duration;
-	
-	public Disk (String s){
+public class Disk extends News {
+	private String duration;
+
+	public Disk(String s) {
 		super(s);
-		setDuration(Double.parseDouble(s.split(" / ")[4])); //not correct, change to type Time
+		setDuration(s.split(" / ")[4]);
 	}
 
-	public double getduration() {
+	public String getduration() {
 		return duration;
 	}
 
-	public void setDuration(double duration) {
+	public void setDuration(String duration) {
 		this.duration = duration;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Disk: " + super.toString() + ", duration=" + duration;
+		return "DISK: " + super.toString() + ", duration: " + duration;
 	}
 }
-

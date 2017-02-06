@@ -1,4 +1,4 @@
-package com.epam.news.service;
+package com.epam.news.service.exception;
 
 public class ServiceException extends Exception{
 

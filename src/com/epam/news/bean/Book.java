@@ -1,9 +1,9 @@
 package com.epam.news.bean;
 
-public class Book extends News{	
+public class Book extends News {
 	private String genre;
-	
-	public Book(String s){
+
+	public Book(String s) {
 		super(s);
 		setGenre(s.split(" / ")[4]);
 	}
@@ -18,7 +18,7 @@ public class Book extends News{
 
 	@Override
 	public String toString() {
-		return "Book: " + super.toString() + ", genre=" + genre;
+		return "BOOK: " + super.toString() + ", genre: " + genre;
 	}
 
 }

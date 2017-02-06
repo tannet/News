@@ -1,29 +1,61 @@
 package com.epam.news.dao.impl;
 
-import com.epam.news.bean.News;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import com.epam.news.dao.exception.DAOException;
 import com.epam.news.dao.interfaces.NewsDAO;
-import com.epam.news.dao.factory.DAOFactory;
 
 public class DBNewsDAO implements NewsDAO {
-	
-	private String fileName = "news.txt";
 
-    @Override
-    public void addNews(News news) {
-//        DAOFactory daoObjectFactory = DAOFactory.getInstance();
-//        NewsDAO bookDAO = daoObjectFactory.getBookDAO();
-//        bookDAO.addNews(news);
-    	
-    	
-    }
+	private static String FILENAME = "news.txt";
+	private static FileWriter writer;
+	private static BufferedReader reader;
 
-    @Override
-    public void deleteNews(News news) {
+	@Override
+	public void addNews(String newsToAdd) throws DAOException {
+		writeFile(newsToAdd);
+	}
 
-    }
+	@Override
+	public ArrayList<String> findNews() {
+		return readFile();
+	}
 
-    @Override
-    public void editNews(News news) {
+	/// File actions: ///
+	// in other class?
+	private static ArrayList<String> readFile() {
+		File fileIn = new File(FILENAME);
+		ArrayList<String> allNews = new ArrayList<>();
+		try {
+			reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileIn)));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				allNews.add(line);
+			}
+		} catch (IOException e) {
+			System.out.println("File reading error");
+		}
+		return allNews;
+	}
 
-    }
+	private static void writeFile(String result) throws DAOException {
+		File fileOut = new File(FILENAME);
+		try {
+			writer = new FileWriter(fileOut, true);
+			writer.write("\n");
+			writer.write(result);
+			writer.flush();
+		} catch (FileNotFoundException e) {
+			throw new DAOException(e);
+		} catch (IOException e) {
+			System.out.println("File writing error");
+		}
+	}
 }

@@ -11,7 +11,7 @@ public class Actions {
 	    System.out.println("Enter the command and the string below.");
 		System.out.println("String format: [Category / Title / Author / Year / Additional info]");
 		String command = sc.nextLine();
-		requestMap.put("command", command);
+		requestMap.put("command", command.split(" ")[0]);
 		String newsToAdd = sc.nextLine();
 		requestMap.put("text", newsToAdd);
 		return requestMap;
