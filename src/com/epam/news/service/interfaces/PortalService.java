@@ -1,13 +1,10 @@
 package com.epam.news.service.interfaces;
 
-import com.epam.news.bean.News;
+import com.epam.news.service.exception.ServiceException;
 
-/**
- * Created by hannatarletskaya on 1/30/17.
- */
 public interface PortalService {
-    public void addNews(News news);
+	public void addNews(String s) throws ServiceException;
 
-    public void findNews(News news);
+	public void findNews(String s) throws ServiceException;
 
 }

@@ -1,19 +1,24 @@
 package com.epam.news.bean;
 
 public class Disk extends News{
-	private double numberOfTracks;
-
-	public double getNumberOfTracks() {
-		return numberOfTracks;
+	private double duration;
+	
+	public Disk (String s){
+		super(s);
+		setDuration(Double.parseDouble(s.split(" / ")[4])); //not correct, change to type Time
 	}
 
-	public void setNumberOfTracks(double numberOfTracks) {
-		this.numberOfTracks = numberOfTracks;
+	public double getduration() {
+		return duration;
+	}
+
+	public void setDuration(double duration) {
+		this.duration = duration;
 	}
 	
 	@Override
 	public String toString() {
-		return "Disk: " + super.toString() + ", numberOfTracks=" + numberOfTracks;
+		return "Disk: " + super.toString() + ", duration=" + duration;
 	}
 }
 

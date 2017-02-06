@@ -9,6 +9,13 @@ public class News {
     //private double price;
     //private String additionalInfo;
     
+    News(String s){
+    	String[] initValues = s.split(" / ");
+    	setCategory(initValues[0]);
+    	setTitle(initValues[1]);
+    	setAuthor(initValues[2]);
+    	setYear(Integer.parseInt(initValues[3]));
+    }
     
 	public String getCategory() {
 		return category;

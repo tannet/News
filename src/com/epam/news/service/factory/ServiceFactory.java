@@ -14,7 +14,7 @@ public final class ServiceFactory {
         return instance;
     }
 
-    public PortalService getLibraryService() {
+    public PortalService getPortalService() {
         return portalService;
     }
 }
